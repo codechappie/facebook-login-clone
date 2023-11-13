@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <section class="form__login__container">
+        <section class="logo">
+            <img src="/images/4lCu2zih0ca.svg" alt="facebook logo">
+        </section>
+        <form class="form__login">
+            <h3>Log Into Facebook</h3>
+            <input type="text" class="input__container" placeholder="Email or phone number">
+            <div class="input__container password show">
+                <input type="text" type="password" placeholder="Password">
+                <button id="showOrHide">
+                    <img class="shown" src="/images/swFqSxKYa5M.png" alt="show">
+                    <img class="hidden" src="/images/je5FEJkU1_K.png" alt="hide">
+                </button>
+            </div>
+            <button class="login__button">Log In</button>
+            <section class="support__links">
+                <a href="https://www.facebook.com/login/identify/?ctx=recover">
+                    Forgot account?
+                </a>
+                <a href="https://www.facebook.com/r.php">Sign up for Facebook</a>
+            </section>
+        </form>
+    </section>
+    <footer>
+        <section class="container">
+            <section class="languages">
+                <a href="#">English (US)</a>
+                <a href="#">Español</a>
+                <a href="#">Italiano</a>
+                <a href="#">Português (Brasil)</a>
+                <a href="#">Français (France)</a>
+                <a href="#">Deutsch</a>
+                <a href="#">日本語</a>
+                <a href="#">中文(简体)</a>
+                <a href="#">العربية</a>
+                <a href="#">हिन्दी</a>
+                <button>
+                    ➕
+                </button>
+            </section>
+            <hr>
+            <section class="other__links">
+                <a href="#">Sign Up</a>
+                <a href="#">Log In</a>
+                <a href="#">Messenger</a>
+                <a href="#">Facebook Lite</a>
+                <a href="#">Video</a>
+                <a href="#">Places</a>
+                <a href="#">Games</a>
+                <a href="#">Marketplace</a>
+                <a href="#">Meta Pay</a>
+                <a href="#">Meta Store</a>
+                <a href="#">Meta Quest</a>
+                <a href="#">Instagram</a>
+                <a href="#">Threads</a>
+                <a href="#">Fundraisers</a>
+                <a href="#">Services</a>
+                <a href="#">Voting Information Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Privacy Center</a>
+                <a href="#">Groups</a>
+                <a href="#">About</a>
+                <a href="#">Create ad</a>
+                <a href="#">Create Page</a>
+                <a href="#">Developers</a>
+                <a href="#">Careers</a>
+                <a href="#">Cookies</a>
+                <a href="#">Ad choices <img src="/images/icon.png" alt=""></a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+                <a href="#">Contact Uploading & Non-Users</a>
+            </section>
+            <section class="copyright">
+                <a href="#">Meta © 2023</a>
+            </section>
+        </section>
+    </footer>
+
+    <script>
+
+        window.addEventListener("load", () => {
+            const showOrHide = document.getElementById("showOrHide");
+            const passwordInput = document.querySelector(".password input");
+            const loginButton = document.querySelector(".login__button");
+            const passwordInputContainer = document.querySelector(".password");
+
+            const showOrHideButton = () => {
+                if (passwordInput.value === "") {
+                    showOrHide.style.display = "none";
+                } else {
+                    showOrHide.style.display = "flex";
+                }
+            }
+
+            showOrHideButton();
+
+            passwordInput.addEventListener("keyup", () => {
+                showOrHideButton();
+            });
+
+            showOrHide.addEventListener("click", (e) => {
+                e.preventDefault();
+                passwordInputContainer.classList.toggle("show");
+                if (passwordInputContainer.classList.value.includes("show")) {
+                    passwordInput.setAttribute("type", "text");
+                } else {
+                    passwordInput.setAttribute("type", "password");
+                }
+            });
+
+            loginButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                window.location.href = "https://www.facebook.com/login";
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>

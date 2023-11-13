@@ -1,0 +1,268 @@
+@import url("https://v1.fontapi.ir/css/SFProDisplay");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family:
+        SF Pro Display,
+        sans-serif,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    min-width: 980px;
+    font-size: 15px;
+    min-height: 100vh;
+}
+
+body{
+    overflow-y: scroll;
+    width: 100vw;
+    height: 100%;
+}
+
+.form__login__container{
+    background: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    padding: 80px 0;
+    box-sizing: content-box;
+}
+
+.form__login__container .logo {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__login__container .logo img {
+    width: 240px;
+    height: auto;
+    position: relative;
+    top: -22px;
+}
+
+.form__login {
+    background: #ffffff;
+    width: 396px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    padding: 0 0 14px 0;
+    border: 1px solid #dddfe2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    padding-bottom: 15px;
+}
+
+.form__login h3 {
+    padding: 24px 0 16px 0;
+    font-weight: 400;
+    font-size: 1.24rem;
+    line-height: 22px;
+    letter-spacing: 0.02rem;
+    color: #1c1e21;
+}
+
+.form__login .input__container {
+    display: block;
+    width: 364px;
+    height: 52px;
+    line-height: 16px;
+    border: 1px solid #dddfe2;
+    color: #676c79;
+    margin: 6px 17px;
+    border-radius: 6px;
+    font-size: 1.18rem;
+    font-weight: 400;
+    padding: 14px 16px;
+}
+
+.form__login .input__container.password {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 40px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.form__login .input__container.password input {
+    font-size: 0.9rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 14px 16px;
+    border: none;
+}
+
+.form__login .input__container input[type="text"], 
+.form__login .input__container {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #2a2c31;
+}
+
+.form__login .input__container input[type="password"]::placeholder {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.form__login .input__container.password button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.form__login .password .shown {
+    display: none;
+}
+
+.form__login .password .hidden {
+    display: flex;
+}
+
+.form__login .password.show .shown {
+    display: flex;
+}
+
+.form__login .password.show .hidden {
+    display: none;
+}
+
+.form__login .input__container.password button:hover{
+    background: #eeeff0;
+}
+
+.form__login .input__container::placeholder,
+.form__login .input__container input::placeholder {
+    color: #969dab;
+}
+
+.form__login .login__button {
+    width: 364px;
+    height: 48px;
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 21px;
+    line-height: 48px;
+    padding: 0 16px;
+    margin: 5px 0 2px 0;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form__login .support__links {
+    box-sizing: content-box;
+    height: 18.75px;
+    padding: 15px 0 18px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.form__login .support__links a {
+    color: #1877f2;
+    font-size: 15px;
+    font-weight: 400px;
+    text-decoration: none;
+}
+
+.languages a,
+.other__links a{
+    text-decoration: none;
+}
+
+footer .container {
+    background: #ffffff;
+    width: 85%;
+    max-width: 980px;
+    margin: 0 auto;
+    margin-top: 160px;
+}
+
+footer .container .languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 5px;
+}
+
+
+footer .container .languages a {
+    font-size: 0.85rem;
+}
+
+footer .container .other__links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .container .other__links img {
+    width: 15px;
+    filter: saturate(1.2);
+}
+
+footer .container .languages button {
+    width: 30px;
+    height: 20px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a9adb3;
+    background-color: #ebedf0;
+    border: 1px solid #ccd0d5;
+    border-radius: 2px;
+}
+
+footer .container .other__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    row-gap: 4px;
+}
+
+footer .container a {
+    color: #8a8d91;
+    font-size: 0.88rem;
+}
+
+footer .container hr {
+    height: 8px;
+    border: none;
+    border-bottom: 1px solid #dddfe2;
+    font-size: 1px;
+    margin-bottom: 8px;
+}
+
+footer .container .copyright {
+    margin-top: 20px;
+}
+
+footer .container .copyright a {
+    font-size: .8rem;
+    text-decoration: none;
+}
+
+
